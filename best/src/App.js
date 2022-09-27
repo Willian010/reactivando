@@ -1,7 +1,7 @@
 import './App.css';
 import {Navbar} from './componentes/NavBar/NavBar';
 import {Greeting} from '../src/componentes/ItemListContainer/ItemListContainer';
-import {CardWidget, IconoCard} from '../src/componentes/CardWidget/CardWidget';
+//import {CardWidget, IconoCard} from '../src/componentes/CardWidget/CardWidget';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
       
       <Navbar/>
-      <CardWidget/>
+     
       <Greeting/>
     
       </header>

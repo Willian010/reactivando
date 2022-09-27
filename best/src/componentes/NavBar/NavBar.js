@@ -1,4 +1,6 @@
-import {CardWidget} from '../src/componentes/CardWidget/CardWidget';
+//import {CardWidget} from '../src/componentes/CardWidget/CardWidget';
+
+import { CardWidget } from "../CardWidget/CardWidget";
 
 export function Navbar (){
     
@@ -16,8 +18,7 @@ export function Navbar (){
               </div>
               <div>
                 
-                <CardWidget/>
-                
+              <CardWidget/>
                 
               </div>
             </div>

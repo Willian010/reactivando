@@ -1,6 +1,5 @@
 import {CardWidget} from '../src/componentes/CardWidget/CardWidget';
 
-
 export function Navbar (){
     
         return (
@@ -15,8 +14,16 @@ export function Navbar (){
               <div className="nav">
                 <a  href="#">Navbar</a>
               </div>
+              <div>
+                
+                <CardWidget/>
+                
+                
+              </div>
             </div>
-            <CardWidget/>
-          </div>
+           </div>
+          
+          
+           
         );
       }

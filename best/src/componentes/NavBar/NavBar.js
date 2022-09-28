@@ -8,13 +8,13 @@ export function Navbar (){
           <div className="nav">
             <div expand="lg" variant="light" bg="light">
               <div className="nav">
-                <a  href="#">Navbar</a>
+                <a  href="#">Navbar1</a>
               </div>
               <div className="nav">
-                <a  href="#">Navbar</a>
+                <a  href="#">Navbar2</a>
               </div>
               <div className="nav">
-                <a  href="#">Navbar</a>
+                <a  href="#">Navbar3</a>
               </div>
               <div>
                 

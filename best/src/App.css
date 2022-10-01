@@ -57,3 +57,11 @@
  
 
 }
+.item{
+  display: inline-block;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  background: red;
+
+}

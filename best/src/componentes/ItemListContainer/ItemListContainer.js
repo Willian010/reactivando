@@ -7,8 +7,10 @@ export function Greeting () {
     return(
         <>
         <div className="ItemListContainer">
-        <ItemList/>
         <p >HI</p>
+        
+        <ItemList/>
+        
         <Contador stock={10}  initial={0} onAdd={0}/>
         
         

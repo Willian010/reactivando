@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Item = ({Item}) => {
+export function Item  ({servidor})  {
      const [likes, setLikes] = useState(0);
 
     const incrementar = () => {
@@ -10,8 +10,8 @@ export const Item = ({Item}) => {
 
     return(
             <div className="item">
-            <img src={Item.imagen} alt="Imagen" className="item-img"/>
-            <p className="descripcion">{Item.descripcion}</p>   
+            <img src={servidor.imagen} alt="Imagen" className="item-img"/>
+            <p className="descripcion">{servidor.descripcion}</p>   
             <p>{likes}</p>
             <button className="item-boton" onClick={incrementar}></button>
             </div>

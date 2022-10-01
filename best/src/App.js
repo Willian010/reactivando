@@ -12,10 +12,10 @@ function App() {
       <header className="App-header">
       
       <Navbar/>
-     
+      <ItemList/>
       <Greeting/>
 
-      <ItemList/>
+      
     
       </header>
     </div>

@@ -8,7 +8,7 @@ export function Greeting () {
         <>
         <div className="ItemListContainer">
         <ItemList/>
-        <p >hola</p>
+        <p >HI</p>
         <Contador stock={10}  initial={0} onAdd={0}/>
         
         

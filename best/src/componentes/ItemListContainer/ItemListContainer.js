@@ -11,7 +11,7 @@ export function Greeting () {
         
         <ItemList/>
         
-        <Contador stock={10}  initial={0} onAdd={0}/>
+        <Contador stock={10}  initial={0} agregarServicio={0}/>
         
         
         

@@ -3,6 +3,7 @@
 import { useState } from "react"
 
 export const Contador= ({stock, initial, agregarServicio})=>{
+     
      const[contador , setContador]= useState (initial) ;
 
      const incrementar =() =>{
@@ -23,7 +24,7 @@ return(
 
 <button  onClick={decrementar}>-</button>
 
-<button   onClick={()=>(agregarServicio(contador))} className={`btnDanger ${contador>1 ? 'activo' : 'inactivo'}`} disabled={false}>Agregar al carro</button>
+<button   onClick={()=>(agregarServicio(contador))} className={`btnDanger ${contador>1 ? 'activo' : 'inactivo'}`} >Agregar al carro</button>
 {
     contador>1 ?
     <p>Agregue</p>
@@ -32,7 +33,7 @@ return(
 }
 
 </div>
-    )
+    ) 
 }
 //onClick={  () =>onAdd()}
 //<button className="Agregar" disabled={stock ===0} onClick={()=>(onAdd(contador))}>Agregar al carro</button>

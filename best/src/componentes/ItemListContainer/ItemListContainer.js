@@ -1,6 +1,6 @@
-import { Contador } from '../ItemCount/ItemCount';
+//import { Contador } from '../ItemCount/ItemCount';
 import { ItemList } from '../ItemList/ItemList';
-
+//import {agregar} from '../src/App';
 
 export function Greeting () {
     
@@ -11,11 +11,8 @@ export function Greeting () {
         
         <ItemList/>
         
-        <Contador stock={10}  initial={0} agregarServicio={0}/>
-        
-        
-        
-        </div>
+
+           </div>
         </>
     )
 }

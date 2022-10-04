@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Contador } from "../ItemCount/ItemCount";
+
 
 export function Item  ({servidor})  {
      const [likes, setLikes] = useState(0);
@@ -11,10 +13,12 @@ export function Item  ({servidor})  {
     return(
             <div className="item">
             <img src={servidor.imagen} alt="Imagen" className="item-img"/>
-            <p className="descripcion">{servidor.descripcion}</p>   
+            <p className="descripcion">{servidor .descripcion}</p>   
             <p>{likes}</p>
-            <button className="item-boton" onClick={incrementar}></button>
+            
+            <Contador stock={10} initial={0}  agregarServicio={incrementar}/>
             </div>
         
     )
 } 
+//<button className="item-boton" onClick={incrementar}></button>

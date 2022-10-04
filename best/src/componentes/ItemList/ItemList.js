@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 //import {Item} from '../src/componentes/Item/Item';
 import { Item } from '../Item/Item';
+import { Contador } from '../ItemCount/ItemCount';
 //import Redes from '../src/assets/Redes.jpg';
 //import {useParams} from 'react-router-dom';
     
@@ -9,14 +10,16 @@ const arregloServidores  = [
 
     {
         id:1,
-        nombre : "Redes Sociales",
+        name : "Redes Sociales",
         descripcion: "Trabajamos en su negocio de forma externa",
+        price : 2200,
         
     },
     {
         id:2,
-        nombre : "Mantenimiento",
+        name : "Mantenimiento",
         descripcion: "Trabajamos en su negocio de forma externa",
+        price: 2300,
         
     },
    ]
@@ -56,9 +59,9 @@ const arregloServidores  = [
      } ,[])
 
 
-    return (
+    return (  
         <div className='listContainer'>
-            
+         
             <div className='cardsContainer'>{
                 /*servidores.length>0 &&
                 <>

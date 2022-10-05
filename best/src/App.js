@@ -8,7 +8,8 @@ import { Contador} from './componentes/ItemCount/ItemCount';
 //import Redes from '../src/assets/Redes.jpg';
 import {useState, useEffect} from 'react';
 import { CardWidget } from './componentes/CardWidget/CardWidget';
-import { ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
+import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes,Route,Navigate } from 'react-router-dom';
 
 export function App() {
  
@@ -38,21 +39,25 @@ console.log("numeroServicio" , numeroServicio);
  
  
   return (
+    <BrowserRouter>
     <div className="App">
       <header className="App-header">
       
       <Navbar/>
-      <ItemList/>
-      <Greeting/>
+
+      <Routes>
+      <Route path='/' element={ <Greeting/>}/>
+      <Route path='/productos' element={ <Greeting/>}/>
+      <Route path='/productos/:tipo' element={ <Greeting/>}/>
+      <Route path='/productos' element={ <ItemDetailContainer/>}/>
       <p>{estadoCarrito}</p>
-      <Contador stock={10} initial={0} agregarServicio={agregar}/>
-      <CardWidget/>
-      <ItemDetailContainer/>
-      
-    
+      <Route path='*' element={ <ItemDetailContainer/>}/>
+      </Routes>
       </header>
     </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+//<ItemList/><CardWidget/>

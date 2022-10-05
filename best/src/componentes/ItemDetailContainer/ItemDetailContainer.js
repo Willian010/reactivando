@@ -1,37 +1,36 @@
-//import { useState, useEffect } from "react";
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Item } from '../Item/Item';
-import {Item} from './componentes/ItemDetail/ItemDetail';
+//import { Item } from '../Item/Item';
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 import {arregloServidores} from './componentes/ItemList/ItemList';
-import { useParams } from 'react-router-dom';
+//import {item} from '../ItemList/ItemList';
+//import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
 
-export const ItemListContainer = () => {
-    const {productoId }= useParams();
-    const [ item, setItem] = useState=({});
+export const ItemDetailContainer =() =>{
+   
+    const {productId} = useParams()
 
-    const getItem = () => {
-         return new Promise(( resolve, reject)=>{
-            const productos = arregloServidores.find(item=>item.id === parseInt(id));
-            resolve(productos)
-         }
-    
-         )
+    const [item, setItem] = useState({})
+    const getItem = (id)=>{
+        return new Promise((resolve, reject)=>{
+            const product = arregloServidores.find(item=>item.id === parseInt(id));
+            resolve(product)
+        })
     }
+
     useEffect(()=>{
         const getProducto = async()=>{
-            const producto = await getItem(productoId);
-            setItem(producto)
+            const producto = await getItem(productId);
+            setItem(producto);
         }
         getProducto();
-    }, [productoId])
+    },[productId])
+
+    return(
+        <div className="item-detail-container">
+            <p style={{width:"100%", color: "white"}}>item detail container</p>
+            <ItemDetail item={item}/>
+        </div>
+    )
 }
-return(
-    <div>
-        <p>Item Detail Container</p>
-        <ItemDetail item={Item}/>
-
-    </div>
-
-
-)

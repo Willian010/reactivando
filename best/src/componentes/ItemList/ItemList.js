@@ -3,10 +3,10 @@ import React,{useEffect,useState} from 'react';
 import { Item } from '../Item/Item';
 import { Contador } from '../ItemCount/ItemCount';
 //import Redes from '../src/assets/Redes.jpg';
-//import {useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
     
 
-const arregloServidores  = [
+ export const arregloServidores  = [
 
     {
         id:1,
@@ -26,7 +26,7 @@ const arregloServidores  = [
    
    export const ItemList = ()=>  {
     
-   //const {listadoId} = useParams();
+   const {listadoId} = useParams();
    
     const [servidores, setServidores] = useState([]);
 
@@ -63,22 +63,13 @@ const arregloServidores  = [
         <div className='listContainer'>
          
             <div className='cardsContainer'>{
-                /*servidores.length>0 &&
-                <>
-                <Item servidor={servidores[0]}/>
-                <Item servidor={servidores[1]}/>
-                </>
-            }*/
-              
-                
-            
-                
-                   servidores.map((servidor)=>{
-                        return(
-                            <Item servidor={servidor}/>
+           
+                   servidores.map(servidor=>(
+                       
+                            <Item key={servidor.name} servidor ={servidor}/>
                             
-                        )
-                    })
+                        
+                   ))
                 }
             </div>
         </div>

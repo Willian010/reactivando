@@ -47,7 +47,6 @@ console.log("numeroServicio" , numeroServicio);
 
       <Routes>
       <Route path='/' element={ <Greeting/>}/>
-      <Route path='/productos' element={ <Greeting/>}/>
       <Route path='/productos/:tipo' element={ <Greeting/>}/>
       <Route path='/productos' element={ <ItemDetailContainer/>}/>
       <p>{estadoCarrito}</p>

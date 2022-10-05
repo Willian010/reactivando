@@ -5,7 +5,7 @@ import {ItemCount} from ' ./componentes/ItemCount/ItemCount';
 //import {CartContext} from
 
 export const ItemDetail = ({item})=>{
-   //const {addServidor}= useContext(CartContext);
+   const {addServidor}= useContext(CartContext);
     const [quantity, setQuantity]= useState(0);
 
 

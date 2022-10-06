@@ -1,6 +1,6 @@
 import './App.css';
 import {Navbar} from './componentes/NavBar/NavBar';
-import {Greeting} from '../src/componentes/ItemListContainer/ItemListContainer';
+import {Greeting, ItemListContainer} from '../src/componentes/ItemListContainer/ItemListContainer';
 import { ItemList } from './componentes/ItemList/ItemList';
 import { Contador} from './componentes/ItemCount/ItemCount';
 //import {CardWidget, IconoCard} from '../src/componentes/CardWidget/CardWidget';
@@ -46,8 +46,8 @@ console.log("numeroServicio" , numeroServicio);
       <Navbar/>
 
       <Routes>
-      <Route path='/' element={ <Greeting/>}/>
-      <Route path='/productos/:tipo' element={ <Greeting/>}/>
+      <Route path='/' element={ <ItemListContainer/>}/>
+      <Route path='/productos/:tipoProducto' element={ <ItemListContainer/>}/>
       <Route path='/productos' element={ <ItemDetailContainer/>}/>
       <p>{estadoCarrito}</p>
       <Route path='*' element={ <ItemDetailContainer/>}/>

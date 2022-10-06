@@ -8,11 +8,12 @@ import {arregloServidores} from './componentes/ItemList/ItemList';
 //import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
 
 export const ItemDetailContainer =() =>{
-   
-    const {productId} = useParams()
+    const {productId} = useParams();
+    console.log("productId", productId);
 
-    const [item, setItem] = useState({})
-    const getItem = (id)=>{
+        const [item, setItem] = useState({})
+        
+        const getItem = (id)=>{
         return new Promise((resolve, reject)=>{
             const product = arregloServidores.find(item=>item.id === parseInt(id));
             resolve(product)
@@ -27,9 +28,10 @@ export const ItemDetailContainer =() =>{
         getProducto();
     },[productId])
 
+        console.log("item",item)
     return(
         <div className="item-detail-container">
-            <p style={{width:"100%", color: "white"}}>item detail container</p>
+            <p >Detalle</p>
             <ItemDetail item={item}/>
         </div>
     )

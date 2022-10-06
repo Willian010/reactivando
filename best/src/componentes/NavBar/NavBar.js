@@ -21,11 +21,15 @@ export function Navbar (){
               </div>
               <div className="nav">
               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
-                to="/productos/e-commers">Packs</NavLink>
+                to="/productos/e-commers">E-commers</NavLink>
               </div>
               <div className="nav">
               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
-                to="/productos/servidornube">Precios</NavLink>
+                to="/productos/servidornube">Servidor</NavLink>
+              </div>
+              <div className="nav">
+              <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
+                to="/productos/precios">Precios</NavLink>
               </div>
               <div>
                 

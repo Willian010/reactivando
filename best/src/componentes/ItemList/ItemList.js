@@ -1,32 +1,16 @@
 import React,{useEffect,useState} from 'react';
 //import {Item} from '../src/componentes/Item/Item';
 import { Item } from '../Item/Item';
-import { Contador } from '../ItemCount/ItemCount';
+//import { Contador } from '../ItemCount/ItemCount';
 //import Redes from '../src/assets/Redes.jpg';
-import {useParams} from 'react-router-dom';
+//import {useParams} from 'react-router-dom';
     
 
- export const arregloServidores  = [
 
-    {
-        id:1,
-        name : "Redes Sociales",
-        descripcion: "Trabajamos en su negocio de forma externa",
-        price : 2200,
-        
-    },
-    {
-        id:2,
-        name : "Mantenimiento",
-        descripcion: "Trabajamos en su negocio de forma externa",
-        price: 2300,
-        
-    },
-   ]
    
-   export const ItemList = ()=>  {
+   export const ItemList = ({servidores})=>  {
     
-   const {listadoId} = useParams();
+   /*const {listadoId} = useParams();
    
     const [servidores, setServidores] = useState([]);
 
@@ -43,7 +27,7 @@ import {useParams} from 'react-router-dom';
         //})
    } 
    
-    useEffect(()=>{
+   /* useEffect(()=>{
         const funcionAsincrona = async()=>{
            try {
             const listado = await obtenerServidores();
@@ -57,7 +41,7 @@ import {useParams} from 'react-router-dom';
        
         funcionAsincrona();
      } ,[])
-
+*/
 
     return (  
         <div className='listContainer'>

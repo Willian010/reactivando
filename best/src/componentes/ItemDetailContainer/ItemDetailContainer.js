@@ -1,24 +1,25 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-//import { Item } from '../Item/Item';
+import { arregloProductos } from '../BaseDD/BaseDD';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
-import {arregloServidores} from './componentes/ItemList/ItemList';
+//import {arregloProductos} from './componentes/BaseDD/BaseDD';
 //import {item} from '../ItemList/ItemList';
 //import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
 
 export const ItemDetailContainer =() =>{
+    
     const {productId} = useParams();
     console.log("productId", productId);
-
-        const [item, setItem] = useState({})
+    
+    const [item, setItem] = useState({})
         
         const getItem = (id)=>{
         return new Promise((resolve, reject)=>{
-            const product = arregloServidores.find(item=>item.id === parseInt(id));
-            resolve(product)
+            const product = arregloProductos.find(item=>item.id === parseInt(id));
+            resolve(product);
         })
-    }
+        }
 
     useEffect(()=>{
         const getProducto = async()=>{

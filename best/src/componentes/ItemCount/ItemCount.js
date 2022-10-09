@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export const Contador= ({stock, initial, agregarServicio})=>{
+export const Contador= ({stock, initial, agregarProductos})=>{
      
      const[contador , setContador]= useState (initial) ;
 
@@ -24,7 +24,7 @@ return(
 
 <button  onClick={decrementar}>-</button>
 
-<button   onClick={()=>(agregarServicio(contador))} className={`btnDanger ${contador>1 ? 'activo' : 'inactivo'}`} >Agregar al carro</button>
+<button   onClick={()=>(agregarProductos(contador))} className={`btnDanger ${contador>1 ? 'activo' : 'inactivo'}`} >Agregar al carro</button>
 {
     contador>1 ?
     <p>Agregue</p>

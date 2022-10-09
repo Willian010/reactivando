@@ -1,18 +1,20 @@
 import {  useState } from "react";
 //import { useContext } from "react";
-import {ItemCount} from ' ./componentes/ItemCount/ItemCount';
-//import { Item } from '../Item/Item';
-//import {CartContext} from
+
+//import {Con} from ' ./componentes/ItemCount/ItemCount';
+import { Contador } from "../ItemCount/ItemCount";
+//import {item} from "../ItemDetailContainer/ItemDetailContainer";
+//import {CartContext} from '/ AGREGAR RUTA
 
 export const ItemDetail = ({item})=>{
-   const {addServidor}= useContext(CartContext);
+   //const {addServidor}= useContext(CartContext);
     const [quantity, setQuantity]= useState(0);
 
 
     const onAdd = (count) =>{
-        addServidor(item,count);
+       // addServidor(item,count);
         setQuantity(count);
-        }
+      }
 
         return(
             <div>
@@ -24,7 +26,7 @@ export const ItemDetail = ({item})=>{
                         <h4>{item.name}</h4>
                         <h5>{item.price}</h5>
                     </div>
-                <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+                <Contador initial={1} stock={10} onAdd={onAdd}/>
 
             </div>
         )

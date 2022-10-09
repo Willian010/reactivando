@@ -20,40 +20,42 @@ export function Greeting () {
 import { useEffect, useState } from "react";
 //import './ItemListContainer.css';
 // import { ItemCount } from "../ItemCount/ItemCount"
-import {servidor} from './Item/Item';
+//import {producto } from './Item/Item';
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import {arregloServidores} from '../BaseDD/BaseDD';
+import {arregloProductos} from '../BaseDD/BaseDD';
+//import {Item} from '../Item/Item';   
+
 
 export const ItemListContainer = ()=>{
-    const {tipoServidor} = useParams();
-    console.log('tipodeServidor',tipoServidor);
+    const {tipoProducto} = useParams();
+    console.log('tipoProducto',tipoProducto);
 
     const [productos, setProductos] = useState([]);
 
     const promesa = new Promise((resolve, reject)=>{
         setTimeout(() => {
-            resolve(arregloServidores);
+            resolve(arregloProductos);
         }, 2000);
     })
 
     useEffect(()=>{
         promesa.then(resultado=>{
-            if(!tipoServidor){
+            if(!tipoProducto){
                 setProductos(resultado)
             } else{
-                const nuevaLista = resultado.filter(servidor=>servidor.id === tipoServidor);
+                const nuevaLista = resultado.filter(item=>item.name === tipoProducto);
                 // console.log('nuevaLista',nuevaLista)
                 setProductos(nuevaLista)
             }
         })
-    },[tipoServidor])
+    },[tipoProducto])
 
-    console.log('servidor', servidor)
+    console.log('productos', productos)
     return(
         <div className="item-list-container">
             <p>Lista</p>
-            <ItemList servidores={servidor}/>
+            <ItemList item={productos}/>
         </div>
     )
 } 

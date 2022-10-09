@@ -2,7 +2,8 @@
 
 import { Link, NavLink } from "react-router-dom";
 import { CardWidget } from "../CardWidget/CardWidget";
-import bur from '../assets/bur.png';
+//import bur from './best/src/assets/bur.png';
+
 
 export function Navbar (){
     
@@ -10,14 +11,18 @@ export function Navbar (){
           <nav>
           <Link to ='/'>
           <div>
-            <img className="logo" src={bur} alt="Logo"/>
+            <img className="logo" src={'https://previews.123rf.com/images/redlinevector/redlinevector1609/redlinevector160900725/62181448-sombrero-de-verano-para-hombre-icono-plana-ilustraci%C3%B3n-de-vectores-multicolor-del-sombrero-de-la-pro.jpg?fj=1'} alt="Logo"/>
             </div>
           </Link>
           <div className="nav">
             <div expand="lg" variant="light" bg="light">
+            <div className="nav">
+               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
+                to="/productos">Inicial</NavLink> 
+              </div>
               <div className="nav">
                <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
-                to="/productos">Inicio Servicios</NavLink> 
+                to="/productos/mantenimiento">Mantenimiento</NavLink> 
               </div>
               <div className="nav">
               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}

@@ -1,15 +1,16 @@
 import './App.css';
 import {Navbar} from './componentes/NavBar/NavBar';
 import {Greeting, ItemListContainer} from '../src/componentes/ItemListContainer/ItemListContainer';
-import { ItemList } from './componentes/ItemList/ItemList';
-import { Contador} from './componentes/ItemCount/ItemCount';
+//import { ItemList } from './componentes/ItemList/ItemList';
+//import { Contador} from './componentes/ItemCount/ItemCount';
 //import {CardWidget, IconoCard} from '../src/componentes/CardWidget/CardWidget';
 //import {ItemList} from './src/componentes/ItemList/ItemList';
 //import Redes from '../src/assets/Redes.jpg';
 import {useState, useEffect} from 'react';
-import { CardWidget } from './componentes/CardWidget/CardWidget';
+//import { CardWidget } from './componentes/CardWidget/CardWidget';
 import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes,Route,Navigate } from 'react-router-dom';
+import { CartContainer } from './componentes/ItemList/CartContainer/CartContainer';
 
 export function App() {
  
@@ -32,12 +33,14 @@ export function App() {
 }
 console.log("numeroServicio" , numeroServicio);
  
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
   return (
     <BrowserRouter>
     <div className="App">
@@ -48,7 +51,9 @@ console.log("numeroServicio" , numeroServicio);
       <Routes>
       <Route path='/' element={ <ItemListContainer/>}/>
       <Route path='/productos/:tipoProducto' element={ <ItemListContainer/>}/>
-      <Route path='/productos' element={ <ItemDetailContainer/>}/>
+      <Route path='/productos/:producId' element={ <ItemDetailContainer/>}/>
+      <Route path='/Cart' element={ <CartContainer/>}/>
+
       <p>{estadoCarrito}</p>
       <Route path='*' element={ <ItemDetailContainer/>}/>
       </Routes>

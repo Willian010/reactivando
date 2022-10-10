@@ -2,7 +2,7 @@
 
 import { Link, NavLink } from "react-router-dom";
 import { CardWidget } from "../CardWidget/CardWidget";
-//import bur from './best/src/assets/bur.png';
+import React from 'react'
 
 
 export function Navbar (){
@@ -21,10 +21,6 @@ export function Navbar (){
                 to="/productos">Inicial</NavLink> 
               </div>
               <div className="nav">
-               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
-                to="/productos/mantenimiento">Mantenimiento</NavLink> 
-              </div>
-              <div className="nav">
               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
                 to="/productos/e-commers">E-commers</NavLink>
               </div>
@@ -32,10 +28,7 @@ export function Navbar (){
               <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
                 to="/productos/servidornube">Servidor</NavLink>
               </div>
-              <div className="nav">
-              <NavLink className={({isActive})=>isActive ?  'claseActive': 'claseInactive'}
-                to="/productos/precios">Precios</NavLink>
-              </div>
+             
               <div>
                 
               <CardWidget/>

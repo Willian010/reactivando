@@ -65,3 +65,9 @@
   background: red;
 
 }
+.logo{
+  height: 10vmin;
+  pointer-events: none;
+  float: left;
+  padding-left: 25px;
+}

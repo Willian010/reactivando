@@ -1,10 +1,6 @@
-//import React,{useEffect,useState} from 'react';
-//import {Item} from 'best/src/componentes/Item/Item';
+
 import { Item } from '../Item/Item';
-//import { Contador } from '../ItemCount/ItemCount';
-//import Redes from '../src/assets/Redes.jpg';
-//import {useParams} from 'react-router-dom';
-//import { arregloProductos } from '../BaseDD/BaseDD';
+
 import { Link } from 'react-router-dom';
     
 
@@ -63,11 +59,11 @@ import { Link } from 'react-router-dom';
     return(
         <div className='listContainer'>
             {
-                items.map(producto=>(
-                    <Link key={producto.id} to={`/item/${producto.id}`}>
-                        <Item item={producto}/>
-                    </Link>
-                ))
+               // items.map(producto=>(
+                   //<Link key={producto.id} to={`/item/${producto.id}`}>
+                      //  <Item item={producto}/>
+                   // </Link>
+               // ))
             }
         </div>
     )

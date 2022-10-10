@@ -17,14 +17,11 @@ export function Greeting () {
     )
 }*/
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-//import './ItemListContainer.css';
-// import { ItemCount } from "../ItemCount/ItemCount"
-//import {producto } from './Item/Item';
+import React, { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import {arregloProductos} from '../BaseDD/BaseDD';
-//import {Item} from '../Item/Item';   
+
 
 
 export const ItemListContainer = ()=>{

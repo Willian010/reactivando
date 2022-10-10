@@ -1,16 +1,11 @@
 import './App.css';
 import {Navbar} from './componentes/NavBar/NavBar';
-import {Greeting, ItemListContainer} from '../src/componentes/ItemListContainer/ItemListContainer';
-//import { ItemList } from './componentes/ItemList/ItemList';
-//import { Contador} from './componentes/ItemCount/ItemCount';
-//import {CardWidget, IconoCard} from '../src/componentes/CardWidget/CardWidget';
-//import {ItemList} from './src/componentes/ItemList/ItemList';
-//import Redes from '../src/assets/Redes.jpg';
-import {useState, useEffect} from 'react';
-//import { CardWidget } from './componentes/CardWidget/CardWidget';
+import { ItemListContainer} from '../src/componentes/ItemListContainer/ItemListContainer';
+import React, {useState, useEffect} from 'react';
 import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes,Route,Navigate } from 'react-router-dom';
 import { CartContainer } from './componentes/ItemList/CartContainer/CartContainer';
+import { CartProvider } from './componentes/contex/CartContext';
 
 export function App() {
  
@@ -31,7 +26,7 @@ export function App() {
   setEstadoCarrito ( `el carro contiene ${servicio}`);
  
 }
-console.log("numeroServicio" , numeroServicio);
+console.log("agregar" , agregar);
  
 
 
@@ -42,6 +37,7 @@ console.log("numeroServicio" , numeroServicio);
 
 
   return (
+    <CartProvider>
     <BrowserRouter>
     <div className="App">
       <header className="App-header">
@@ -54,12 +50,14 @@ console.log("numeroServicio" , numeroServicio);
       <Route path='/productos/:producId' element={ <ItemDetailContainer/>}/>
       <Route path='/Cart' element={ <CartContainer/>}/>
 
-      <p>{estadoCarrito}</p>
+      
       <Route path='*' element={ <ItemDetailContainer/>}/>
       </Routes>
       </header>
     </div>
+    <p>{estadoCarrito}</p>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

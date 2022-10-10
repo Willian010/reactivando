@@ -19,7 +19,7 @@ export const arregloProductos  = [
         
     },
     {
-        id:1,
+        id:3,
         name : "Mantenimiento ",
         descripcion: "Trabajamos en su negocio de forma externa",
         price : 2200,

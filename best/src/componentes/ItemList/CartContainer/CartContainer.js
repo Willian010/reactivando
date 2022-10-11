@@ -19,7 +19,7 @@ export const CartContainer = () => {
         }
 
     }
-
+console.log("order", order);
     return(
         <div>
             <p>Cartx</p>

@@ -4,9 +4,22 @@ import { CarItem } from "../../CartItem/CartItem";
 
  
 export const CartContainer = () => {
-    const {prodCartList , clearProdCartList, isInCart} = useContext(CartContext);
+    const {prodCartList , clearProdCartList, isInCart, getTotalPrice} = useContext(CartContext);
+    console.log(prodCartList)
     
     
+    const order = {
+        buyer: {
+            nombre:"mike", telefono: "454545", email:"mikel@gmail.com"
+        },
+        items:{
+            prodCartList,
+            
+
+        }
+
+    }
+
     return(
         <div>
             <p>Cartx</p>
@@ -22,6 +35,7 @@ export const CartContainer = () => {
             <hr/>
             <button onClick={clearProdCartList}>Vaciar Carro</button>
             <button onClick={()=> isInCart(3)}>1</button>
+            <p>Precio Total: {getTotalPrice()}</p>
             
                 
                 

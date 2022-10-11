@@ -16,6 +16,7 @@ export const PaginaFirebase = () => {
             //console.log("docs info", docs[0].id);
             const data = docs.map(doc=>{return {...doc.data(),id:doc.id}})
             setArregloItems(data);
+             
 
 
         }

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import React from 'react'
 
 export const ItemDetail = ({item})=>{
+    const [src, descripcion,name,price] = item;
    const {addProd}= useContext(CartContext);
     const [quantity, setQuantity]= useState(0);
 
@@ -19,11 +20,11 @@ export const ItemDetail = ({item})=>{
             <div>
                     <p>Item Detail</p>
                     <div>
-                        <img src={item.imagen} alt={item.descripcion}/>
+                        <img src={src} alt={descripcion}/>
                     </div>
                     <div>
-                        <h4>{item.name}</h4>
-                        <h5>{item.price}</h5>
+                        <h4>{name}</h4>
+                        <h5>{price}</h5>
                     </div>
                 <Contador initial={1} stock={10} onAdd={onAdd}/>
                 {

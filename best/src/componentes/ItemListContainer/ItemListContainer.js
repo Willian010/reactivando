@@ -1,22 +1,6 @@
-/*import { Contador } from '../ItemCount/ItemCount';
-import { ItemList } from '../ItemList/ItemList';
-//import {agregar} from '../src/App';
 
-export function Greeting () {
-    
-    return(
-        <>
-        <div className="ItemListContainer">
-        <p >HI</p>
-        
-        <ItemList/>
-        <Contador stock={10} initial={0} agregarServicio={agregar}/>
 
-           </div>
-        </>
-    )
-}*/
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";

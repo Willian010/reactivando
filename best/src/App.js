@@ -6,10 +6,11 @@ import {ItemDetailContainer} from './componentes/ItemDetailContainer/ItemDetailC
 import { BrowserRouter, Routes,Route,Navigate } from 'react-router-dom';
 import { CartContainer } from './componentes/ItemList/CartContainer/CartContainer';
 import { CartProvider } from './componentes/contex/CartContext';
+import { PaginaFirebase } from './componentes/PaginaFirebase/PaginaFirebase';
 
 export function App() {
  
-  const [estadoCarrito, setEstadoCarrito] = useState("carrito vacio")
+ /* const [estadoCarrito, setEstadoCarrito] = useState("carrito vacio")
   const [numeroServicio, setNumeroServicio ] = useState(0);
  
    
@@ -26,8 +27,9 @@ export function App() {
   setEstadoCarrito ( `el carro contiene ${servicio}`);
  
 }
-console.log("agregar" , agregar);
- 
+//console.log("agregar" , agregar)
+agregar();
+ */
 
 
 
@@ -38,25 +40,25 @@ console.log("agregar" , agregar);
 
   return (
     <CartProvider>
-    <BrowserRouter>
-    <div className="App">
+      <BrowserRouter>
+      <div className="App">
       <header className="App-header">
       
       <Navbar/>
-
-      <Routes>
-      <Route path='/' element={ <ItemListContainer/>}/>
-      <Route path='/productos/:tipoProducto' element={ <ItemListContainer/>}/>
-      <Route path='/productos/:producId' element={ <ItemDetailContainer/>}/>
-      <Route path='/Cart' element={ <CartContainer/>}/>
-
       
-      <Route path='*' element={ <ItemDetailContainer/>}/>
+      <Routes>
+        <Route path='/' element={ <ItemListContainer/>}/>
+        <Route path='/productos/:tipoProducto' element={ <ItemListContainer/>}/>
+        <Route path='/item/:prodId' element={ <ItemDetailContainer/>}/>
+        <Route path='/Cart' element={ <CartContainer/>}/>
+        <Route path='*' element={ <ItemDetailContainer/>}/>
+        <Route path='/firebase' element={<PaginaFirebase/>}/>
       </Routes>
       </header>
+      
     </div>
-    <p>{estadoCarrito}</p>
-    </BrowserRouter>
+    
+      </BrowserRouter>
     </CartProvider>
   );
 }

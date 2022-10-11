@@ -3,7 +3,7 @@ import { Contador } from "../ItemCount/ItemCount";
 
 
 export const Item  = ({item}) => {
-    const {name , imagen , descripcion, categoria}= item
+    const {name , src , descripcion, categoria}= item;
     const [likes, setLikes] = useState(0);
     
 
@@ -17,7 +17,7 @@ export const Item  = ({item}) => {
     
     return(
             <div className="item" key={name}>
-            <img src={imagen} alt="Imagen" className="item-img"/>
+            <img src={src} alt="Imagen" className="item-img"/>
             <p className="descripcion">{descripcion}</p>  
             <button className="boton-ver"></button> 
             <p>Categoria{categoria}</p>

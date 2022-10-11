@@ -8,7 +8,40 @@ import { Link } from 'react-router-dom';
    
    export const ItemList = ({items})=>  {
     
-   /*//const {listadoId} = useParams();
+ 
+    return(
+        <div className='listContainer'>
+            <div>Item list</div>
+            {
+               items?.map(producto=>(
+                   <Link key={producto.id} to={`/item/${producto.id}`}>
+                        <Item item={producto}/>
+                    </Link>
+            ))
+            }
+        </div>
+    )
+}
+   
+   
+//
+/*setTimeout(() => {
+                
+}, 3000);*/
+/* useEffect(()=>{
+        const funcionAsincrona = async()=>{
+            try {
+                const listado = await obtenerServidores();
+                setServidores(listado);
+                console.log('listado',listado);
+            } catch (error) {
+                console.log("hubo un error")
+            }
+        }
+        funcionAsincrona();
+    },[])*/  
+//--------->
+  /*//const {listadoId} = useParams();
    
     const [producto, setProducto] = useState([]);
 
@@ -56,33 +89,3 @@ import { Link } from 'react-router-dom';
             </div>
         </div>
     )*/
-    return(
-        <div className='listContainer'>
-            {
-               // items.map(producto=>(
-                   //<Link key={producto.id} to={`/item/${producto.id}`}>
-                      //  <Item item={producto}/>
-                   // </Link>
-               // ))
-            }
-        </div>
-    )
-}
-   
-   
-
-/*setTimeout(() => {
-                
-}, 3000);*/
-/* useEffect(()=>{
-        const funcionAsincrona = async()=>{
-            try {
-                const listado = await obtenerServidores();
-                setServidores(listado);
-                console.log('listado',listado);
-            } catch (error) {
-                console.log("hubo un error")
-            }
-        }
-        funcionAsincrona();
-    },[])*/  

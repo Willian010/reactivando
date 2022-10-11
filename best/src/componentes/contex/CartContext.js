@@ -1,4 +1,4 @@
-import { children, createContext, useState } from "react";
+import {  createContext, useState } from "react";
 
 import React from 'react'
 
@@ -22,7 +22,7 @@ export const CartContext= createContext();
         }*/
 
         const  addProd = (prod, qty)=>{
-            const  newList = [...prodCartList,prod]
+            const  newList = [...prodCartList]
             
             if(isInCart(prod.id)){
                 const prodIndex = prodCartList.findIndex(element=>element.id === prod.id)
@@ -37,9 +37,9 @@ export const CartContext= createContext();
             }
 
 
-            const newProd={...prod,quantity:qty}
+            //const newProd={...prod,quantity:qty}
             
-            setProdCartList(newList);
+            //setProdCartList(newList);
             
 
         }
